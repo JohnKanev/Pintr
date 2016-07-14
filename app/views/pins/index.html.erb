@@ -1,7 +1,9 @@
-<p id="notice"><%= notice %></p>
 
+
+
+
+<% if user_signed_in?%>
 <h1>Pins</h1>
-
 <table>
   <thead>
     <tr>
@@ -29,6 +31,11 @@
 </table>
 
 <br>
-<% if user_signed_in? %>
 <%= link_to 'New Pin', new_pin_path %>
+<%else%>
+<div class="jumbotron center">
+  <h1>Welcome to pintr</h1>
+  <p><%= link_to "Log In", new_user_session_path,class: "btn btn-default btn-lg" %>
+     <%= link_to "Sign up", new_user_registration_path,class: "btn btn-primary btn-lg" %></p>
+</div>
 <% end %>

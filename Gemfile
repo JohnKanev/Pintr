@@ -5,7 +5,6 @@ ruby '2.2.4'
 gem 'rails', '~> 5.0.0'
 
 gem 'devise','~> 4.2.0'
-
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
