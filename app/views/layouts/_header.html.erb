@@ -18,11 +18,27 @@
         <li><%= link_to 'About',about_path%></a></li>
         <li><%= link_to 'Home',root_path%></a></li>
         <% if user_signed_in? %>
-      <li>  <%= link_to 'New Pin', new_pin_path %></li>
-          <li><%= link_to 'Edit Account',edit_user_registration_path%></a></li>
-        <li><%= link_to 'Log out',destroy_user_session_path,method: :delete%></a></li>
+        <li>
+          <%= link_to  new_pin_path do %>
+          <i class="fa fa-plus" aria-hidden="true"></i> New Pin
+          <% end %>
+        </li>
+        <li>
+          <%= link_to  edit_user_registration_path do %>
+          <i class="fa fa-cog" aria-hidden="true"></i> Edit Account
+          <% end %>
+        </li>
+        <li>
+          <%= link_to  destroy_user_session_path,method: :delete do %>
+          <i class="fa fa-sign-out" aria-hidden="true"></i> Log out
+          <% end %>
+        </li>
         <% else %>
-        <li><%= link_to 'Sign in',new_user_session_path%></a></li>
+        <li>
+          <%= link_to  new_user_session_path do %>
+          <i class="fa fa-sign-in" aria-hidden="true"></i> Log in
+          <% end %>
+        </li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
