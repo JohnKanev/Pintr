@@ -1,7 +1,6 @@
-# Doing pintr
+#Pintr
 
-This is pintr a pintrest clone
-with Ruby on Rails
+This is a web application where you can add pins
 
-Hear me RoR
+Hear me **RoR**
 by Jovan Kanevche
